@@ -14,26 +14,23 @@
  * limitations under the License.
  */
 
-package com.example.android.lifecycles.step2;
+package com.example.android.lifecycles.step1
 
-import android.support.annotation.Nullable;
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.widget.Chronometer
 
-import android.arch.lifecycle.ViewModel;
+import com.example.android.codelabs.lifecycle.R
 
-/**
- * A ViewModel used for the {@link ChronoActivity2}.
- */
-public class ChronometerViewModel extends ViewModel {
 
-    @Nullable
-    private Long mStartTime;
+class ChronoActivity1 : AppCompatActivity() {
 
-    @Nullable
-    public Long getStartTime() {
-        return mStartTime;
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-    public void setStartTime(final long startTime) {
-        this.mStartTime = startTime;
+        val chronometer = findViewById<Chronometer>(R.id.chronometer)
+
+        chronometer.start()
     }
 }

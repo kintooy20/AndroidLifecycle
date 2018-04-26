@@ -14,15 +14,21 @@
  * limitations under the License.
  */
 
-package com.example.android.lifecycles.step5;
+package com.example.android.lifecycles.step5_solution
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+
+import com.example.android.codelabs.lifecycle.R
 
 /**
- * A ViewModel used in step 5.
+ * Shows two [Fragment_step5] fragments.
  */
-public class SeekBarViewModel extends ViewModel {
+class Activity_step5 : AppCompatActivity() {
 
-    public MutableLiveData<Integer> seekbarValue = new MutableLiveData<>();
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_step5_solution)
+    }
 }
